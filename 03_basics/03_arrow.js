@@ -4,7 +4,7 @@ const user = {
 
     welcomeMessage: function() {
         console.log(`${this.username} , welcome to website`);
-        console.log(this);
+        console.log(this); //print all variables in current scope
     }
 
 }
@@ -13,7 +13,7 @@ const user = {
 // user.username = "sam"
 // user.welcomeMessage()
 
-// console.log(this);
+// console.log(this); //outside so empty
 
 // function chai(){
 //     let username = "hitesh"
@@ -27,10 +27,23 @@ const user = {
 //     console.log(this.username);
 // }
 
-const chai =  () => {
+//arrow function
+const chai =  () => { 
     let username = "hitesh"
-    console.log(this);
+    console.log(this); //in Arrow function "this" is not supported
 }
+const obj = {
+    username: "objects",
+    regularFunction: function () {
+        console.log(this.username);  // Output: objects
+    },
+    arrowFunction: () => {
+        console.log(this.username);  // Output: undefined
+    }
+};
+
+obj.regularFunction();  // Output: object
+obj.arrowFunction();
 
 
 // chai()

@@ -3,6 +3,7 @@ let a = 300
 if (true) {
     let a = 10
     const b = 20
+    //var c=30
     // console.log("INNER: ", a);
     
 }
@@ -11,7 +12,8 @@ if (true) {
 
 // console.log(a);
 // console.log(b);
-// console.log(c);
+// console.log(c); //in JS var is defined globally(var defined in above if block can be acessed here)
+
 
 
 function one(){
@@ -44,7 +46,7 @@ if (true) {
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
 
-console.log(addone(5))
+console.log(addone(5)) //Even if function is defined later this will not give error
 
 function addone(num){
     return num + 1
@@ -52,7 +54,7 @@ function addone(num){
 
 
 
-addTwo(5)
+addTwo(5) //But this will give error - Hoisting
 const addTwo = function(num){
     return num + 2
 }
