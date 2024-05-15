@@ -52,11 +52,11 @@ obj.arrowFunction();
 //     return num1 + num2
 // }
 
-// const addTwo = (num1, num2) =>  num1 + num2
+// const addTwo = (num1, num2) =>  num1 + num2 
 
-// const addTwo = (num1, num2) => ( num1 + num2 )
+// const addTwo = (num1, num2) => ( num1 + num2 ) //if Parentheses used no need to write return keyword
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+const addTwo = (num1, num2) => ({username: "hitesh"}) //if u want to return object this is the syntax
 
 
 console.log(addTwo(3, 4))
