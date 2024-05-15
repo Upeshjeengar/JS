@@ -1,3 +1,8 @@
+/*JAVASCRIPT execution context:
+1.Global 2.Function 3.Eval Execution context
+
+Code: Memory creation phase and execution phase
+*/
 // if
 const isUserloggedIn = true
 const temperature = 41
