@@ -3,7 +3,8 @@
 
 // object literals
 
-const mySym = Symbol("key1")
+const mySym = Symbol("key1") //how to pass symbol in js object
+//we can not directly pass it we have to use [] (line 13)
 
 
 const JsUser = {
@@ -31,7 +32,7 @@ JsUser.greeting = function(){
     console.log("Hello JS user");
 }
 JsUser.greetingTwo = function(){
-    console.log(`Hello JS user, ${this.name}`);
+    console.log(`Hello JS user, ${this.name}`); //this is used before object
 }
 
 console.log(JsUser.greeting());
