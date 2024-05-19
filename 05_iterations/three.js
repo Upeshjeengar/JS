@@ -35,6 +35,6 @@ const myObject = {
 }
 
 // for (const [key, value] of myObject) {
-//     console.log(key, ':-', value);
+//     console.log(key, ':-', value); //map is iterable object(myobject) is not
     
 // }
