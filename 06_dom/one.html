@@ -29,3 +29,97 @@
     </div>
 </body>
 </html>
+<!--
+
+    console.log(window)
+    console.log(window.document) is approx same as console.log(document)
+    console.dir(document)==console.log(window.document)
+
+          Document Tree
+             window
+              ⬇️
+            Document
+              ⬇️
+              HTML
+            ↙️   ↘️
+        Head        ➡️Body
+       ↙   ↘              ↘
+    title  meta             div->attribute
+      ⬇  (has attribute)   h1,h2,p
+    text Node(value)
+
+    Edits element by id
+    document.getElementById('firstHeading').innerHTML="<h1>Upesh Jeengar</h1>" // On wikipedia
+    document.getElementById('search-input').innerHTML="<h1>Upesh Jeengar</h1>" // On youtube 
+   
+    lect-32
+    on This website
+    document.getElementById('title')
+    document.getElementById('title').id
+    document.getElementById('title').class
+    document.getElementById('title').className
+    document.getElementById('title').getAttribute //give error
+    document.getElementById('title').getAttribute('id') 
+    document.getElementById('title').getAttribute('class') 
+    
+    document.getElementById('title').setAttribute('class','test heading')  //edits
+    
+    const title=document.getElementById('title')
+    title
+    title.style.backgroundColor='green' //we know style is set using key value pair in css
+    title.style.padding='15px'
+    title.style.borderRadius='15px'
+
+    //interesting: https://youtu.be/Ab6K57WjWTE&t=680
+    title.textContent //gives us whole text(visible or not)
+    title.innerHTML  //gives whole text including visible,not visible and html tags
+    title.innerText //gives us only visible text (can be used while web scrapping to avoid html tags which need to be cleaned in NLP related task)
+    // all three are giving almost same output difference?
+
+    document.querySelector('h2')
+    document.querySelector('#title') //id
+    document.querySelector('.heading') //class
+    document.querySelector('input[type="password"]') //input password
+    document.querySelector('p:first-child') //paragraph
+    
+    document.querySelector('ul') //select all list
+    const myul = document.querySelector('ul')
+    myul.querySelector('li')
+    const turnGreen=myul.querySelector('li')
+    turnGreen.style.backgroundColor="green"
+    turnGreen.style.padding="10px"
+    turnGreen.innerText="five"
+    //Upto this point we have learned using single value selector
+
+    const templiList=document.querySelectorAll('li') //returns array so you can use some of array methods like foreach
+    templiList //templiList :list of 'li'
+    templiList.style.color='green' // does not support, will give error
+    templiList[0].style.color='green' //runs fine
+    templiList.forEach(function (l) {
+        l.style.backgroundColor='green'
+    })
+
+    document.getElementByClassName('list-item') //returns HTML-collection(not list) of list-item class
+    const tempClassList=document.getElementByClassName('list-item')
+    //tempClassList has no forEach function
+    //convert it to Array
+    myConvertedArray=Array.from(tempClassList)
+    myConvertedArray.forEach(function(li){
+        li.style.color='orange'
+    })
+    
+    //On wikipedia page
+    const allh2 = document.querySelectorAll('h2')
+    allh2[0].innerText
+    allh2[0].innerText='<h1>"hello"</h1>'
+
+    const myH2=document.querySelectorAll('.my-headline')
+    myH2.forEach(function(){
+        h.style.color='red'
+        h.style.backgroundColor='black'
+        h.style.padding='10px'
+        h.innerText="Upesh"
+    })h
+
+
+  -->
