@@ -10,17 +10,17 @@
     
 </body>
 <script>
-    const div = document.createElement('div')
+    const div = document.createElement('div') //creates a new div element
     console.log(div);
+    // we need to add properties to this div element like classname,id
     div.className = "main"
-    div.id = Math.round(Math.random() * 10 + 1)
-    div.setAttribute("title", "generated title")
+    div.id = Math.round(Math.random() * 10 + 1) //randomly generates a new id between 1 and 10 
+    div.setAttribute("title", "generated title") //key value pair
     div.style.backgroundColor = "green"
     div.style.padding = "12px"
-    // div.innerText = "Chai aur code"
+    // div.innerText = "Chai aur code" //this method will update existing text below method will create new
     const addText = document.createTextNode("Chai aur code")
-    div.appendChild(addText)
-
-    document.body.appendChild(div)
+    div.appendChild(addText) //addText added to div
+    document.body.appendChild(div) //to add created child to page
 </script>
 </html>
